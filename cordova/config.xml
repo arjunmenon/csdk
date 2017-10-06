@@ -7,6 +7,6 @@
   <author email="john@example.org">
     John Smith
   </author>
-  <plugin name="cordova-plugin-connectsdk" spec="https://github.com/ConnectSDK/Connect-SDK-Cordova-Plugin.git" />
+  <plugin name="cordova-plugin-connectsdk" />
   <preference name="EnableDeveloperConsole" value="true" />
 </widget>
