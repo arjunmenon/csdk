@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.csdk" version="0.1.0">
+  <name>Csdk</name>
+  <description>
+    Example Tabris.js App
+  </description>
+  <author email="john@example.org">
+    John Smith
+  </author>
+  <plugin name="cordova-plugin-connectsdk" spec="https://github.com/ConnectSDK/Connect-SDK-Cordova-Plugin.git" />
+  <preference name="EnableDeveloperConsole" value="true" />
+</widget>
