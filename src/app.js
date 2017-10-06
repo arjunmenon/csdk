@@ -1,4 +1,5 @@
 const {Button, TextView, ui} = require('tabris');
+var xmldoc = require('xmldoc');
 
 let button = new Button({
   centerX: 0, top: 100,
@@ -96,14 +97,23 @@ var postData= "<s:Envelope s:encodingStyle=\"http://schemas.xmlsoap.org/soap/enc
         "</s:Envelope>";
 var pdl = postData.length;
 
-var xmlHTTP = new tabris.XMLHttpRequest();
-xmlHTTP.onreadystatechange = function() {
-  if(xmlHTTP.readyState === xmlHTTP.DONE) {
-    if(xmlHTTP.status === 200) {
-        console.log(xmlHTTP.responseText)
+fetch('http://192.168.1.6:49152/ctl/RenderingControl', {
+            method: 'POST',
 
-    } else {
-        console.log("not OK: " + xmlHTTP.statusText)
-    }
-  }
-};
+            headers: {
+                // 'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
+                // 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+                "SOAPACTION": "urn:schemas-upnp-org:service:RenderingControl:1#GetVolume",
+                // "Content-Type": "text/xml; charset=utf-8",
+                'Content-Type': contentType,
+                'Content-Length': postData.length,
+                // 'USER-AGENT': UA
+                'Connection': 'close'
+                // 'Access-Control-Allow-Origin': '*'
+            },
+            body: postData
+        }).then(function (response) {
+                console.log(response.text());
+            }).catch(function (error) {
+                console.log('Request failed', error);
+            });
