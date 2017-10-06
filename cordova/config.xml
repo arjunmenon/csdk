@@ -7,6 +7,10 @@
   <author email="john@example.org">
     John Smith
   </author>
-  <plugin name="cordova-plugin-connectsdk" />
+  <plugin name="cordova-plugin-network-information" />    
+  <plugin name="Service-Discovery-DLNA-SSDP" spec="https://github.com/scottdermott/cordova-plugin-discovery.git" />
+  <plugin name="cordova-universal-clipboard" />
+  <plugin name="cordova.plugins.diagnostic" />
+  <access origin="*" />
   <preference name="EnableDeveloperConsole" value="true" />
 </widget>
