@@ -9,6 +9,7 @@
   </author>
   <plugin name="cordova-plugin-network-information" />    
   <plugin name="Service-Discovery-DLNA-SSDP" spec="https://github.com/scottdermott/cordova-plugin-discovery.git" />
+  <plugin name="cordova-plugin-advanced-http" spec="https://github.com/silkimen/cordova-plugin-advanced-http.git" />
   <plugin name="cordova-universal-clipboard" />
   <plugin name="cordova.plugins.diagnostic" />
   <access origin="*" />

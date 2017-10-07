@@ -63,6 +63,7 @@ fetch('http://192.168.1.6:49152/description.xml')
     .then((bodyText) => {
         // now you have the response body you can parse
         console.log("This fetch request worked!");
+        console.log("	ARJUN MENON");
         // console.log(bodyText);
         var results = new xmldoc.XmlDocument(bodyText);
         // console.log("Parsed: \n%s", results.toString({trimmed:true, compressed:true}));
