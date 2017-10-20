@@ -117,3 +117,12 @@ fetch('http://192.168.1.6:49152/ctl/RenderingControl', {
             }).catch(function (error) {
                 console.log('Request failed', error);
             });
+
+
+
+cordovaHTTP.get("http://gb.85novel.com/book/2501.html",
+{}, {},
+function(response) {
+    console.log(response.data);},
+function(response) {
+});
