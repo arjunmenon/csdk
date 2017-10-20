@@ -12,4 +12,7 @@
   <plugin name="cordova.plugins.diagnostic" />
   <plugin name="cordova-plugin-connectsdk" />
   <preference name="EnableDeveloperConsole" value="$IS_DEBUG" />
+  <platform name="android">
+    <preference name="android-minSdkVersion" value="22" />
+</platform>
 </widget>
